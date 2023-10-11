@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+body .container {
+  min-width: 255px;
+  height: 100vh;
+  background-color: white;
+  position: relative;
+  isolation: isolate;
+}
+body .container .background-container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgb(11, 1, 54), rgb(11, 1, 54), rgba(155, 156, 197, 0.2));
+  z-index: 1;
+}
+body .container img {
+  width: 100%;
+  height: 50vh;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+body .container .content-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  gap: 20px;
+  top: 0;
+  z-index: 1;
+  padding: 40px 10px;
+}
+body .container .content-container h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: rgb(192, 192, 192);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+body .container .content-container h1 span {
+  color: white;
+  font-weight: 700;
+}
+body .container .content-container .paragraph-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body .container .content-container .paragraph-container p {
+  text-align: center;
+  font-size: 12px;
+  color: rgb(192, 192, 192);
+  line-height: 15px;
+}
+body .container .content-container #bookNow {
+  width: 60%;
+  height: 45px;
+  border-radius: 10px;
+  background-color: rgb(178, 62, 62);
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: none;
+}
+
+@media only screen and (min-width: 450px) {
+  body .container {
+    min-width: 460px;
+  }
+  body .container .background-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(11, 1, 54), rgba(11, 1, 54, 0.7), rgba(155, 156, 197, 0.2));
+    z-index: 1;
+  }
+  body .container img {
+    height: 60vh;
+  }
+  body .container .content-container {
+    gap: 10px;
+    padding: 40px 20px;
+  }
+  body .container .content-container h1 {
+    font-size: 25px;
+  }
+  body .container .content-container span {
+    font-size: 30px;
+  }
+  body .container .content-container .paragraph-container p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media only screen and (min-width: 550px) {
+  body .container {
+    min-width: 560px;
+  }
+  body .container .background-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(11, 1, 54), rgba(11, 1, 54, 0.7), rgba(155, 156, 197, 0.2));
+    z-index: 1;
+  }
+  body .container img {
+    height: 70vh;
+  }
+  body .container .content-container {
+    gap: 10px;
+    padding: 40px 20px;
+  }
+  body .container .content-container h1 {
+    font-size: 25px;
+  }
+  body .container .content-container span {
+    font-size: 30px;
+  }
+  body .container .content-container .paragraph-container p {
+    gap: 10px;
+  }
+}
+@media only screen and (min-width: 680px) {
+  body .container img {
+    height: 100vh;
+  }
+  body .container .content-container {
+    gap: 40px;
+    padding: 40px 40px;
+    justify-content: center;
+    align-items: start;
+  }
+  body .container .content-container h1 {
+    font-size: 25px;
+    text-align: left;
+  }
+  body .container .content-container span {
+    font-size: 30px;
+  }
+  body .container .content-container .paragraph-container p {
+    text-align: left;
+    gap: 10px;
+  }
+  body .container .content-container #bookNow {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 880px) {
+  body {
+    z-index: -1;
+  }
+  body .container {
+    min-width: 860px;
+    background-image: url("../image/testBike.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    z-index: 1;
+  }
+  body .container .background-container {
+    display: none;
+  }
+  body .container img {
+    display: none;
+  }
+  body .container::after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    top: 0;
+    opacity: 90%;
+    background-color: rgb(5, 5, 55);
+  }
+}
+@media only screen and (min-width: 1230px) {
+  body {
+    opacity: 90%;
+    background-color: rgb(5, 5, 55);
+  }
+  body .container {
+    margin: 0 auto;
+    min-width: 1200px;
+    background-position: 0px -100px;
+  }
+  body .container .background-container {
+    display: none;
+  }
+  body .container .content-container {
+    padding: 0 60px;
+  }
+  body .container .content-container h1 {
+    font-size: 30px;
+    text-align: left;
+    word-spacing: 10px;
+  }
+  body .container .content-container span {
+    font-size: 40px;
+  }
+  body .container .content-container .paragraph-container p {
+    text-align: left;
+    gap: 20px;
+  }
+  body .container .content-container #bookNow {
+    width: 30%;
+  }
+  body .container .container::after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    top: 0;
+    opacity: 90%;
+    background-color: rgb(5, 5, 55);
+  }
+}/*# sourceMappingURL=index.css.map */
